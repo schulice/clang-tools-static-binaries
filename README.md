@@ -4,13 +4,13 @@
 [![Test](https://github.com/cpp-linter/clang-tools-static-binaries/actions/workflows/test.yml/badge.svg)](https://github.com/cpp-linter/clang-tools-static-binaries/actions/workflows/test.yml)
 ![](https://img.shields.io/badge/platform-linux--64%20%7C%20win--64%20%7C%20osx--64%20-blue)
 
-Includes clang-format, clang-tidy, clang-query and clang-apply-replacements. 
+Includes clang-format, clang-tidy, clang-query and clang-apply-replacements.
 
 The supported versions are as follows:
 
 |OS/Version |19|18 |17 |16 |15 |14 |13 |12 |11 |10 |9  |8  |7  |
 |-----------|--|---|---|---|---|---|---|---|---|---|---|---|---|
-|Linux 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |    
+|Linux 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
 |Window 64  |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
 |macOS 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
 
