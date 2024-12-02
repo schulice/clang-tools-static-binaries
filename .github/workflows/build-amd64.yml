@@ -135,13 +135,15 @@ jobs:
       if: ${{ matrix.os == 'macosx' }}
       shell: bash
       run: |
-      run: |
         sed -i.backup 's/gcc_eh.\*|/gcc_eh.*|gcc_ext.*|/g' "$(find /opt/homebrew/Cellar -name CMakeParseImplicitLinkInfo.cmake)"
         brew install gcc@11
     - name: update homebrew
       if: ${{ matrix.os == 'macosx' && matrix.clang-version >= '18' }}
       shell: bash
-      run: brew upgrade node
+      run: |
+        brew update
+        brew upgrade
+        brew cleanup
     - name: cmake
       run: cmake -S ${{ matrix.release }}/llvm -B ${{ matrix.release }}/build ${{ env.COMMON_CMAKE_ARGS }} ${{ matrix.os-cmake-args }} ${{ matrix.extra-cmake-args }}
     - name: build
