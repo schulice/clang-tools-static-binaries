@@ -1,27 +1,36 @@
 # clang-tools static binaries
 
-[![Build](https://github.com/cpp-linter/clang-tools-static-binaries/actions/workflows/build-amd64.yml/badge.svg)](https://github.com/cpp-linter/clang-tools-static-binaries/actions/workflows/build-amd64.yml)
-[![Test](https://github.com/cpp-linter/clang-tools-static-binaries/actions/workflows/test.yml/badge.svg)](https://github.com/cpp-linter/clang-tools-static-binaries/actions/workflows/test.yml)
+<!-- [![Build](https://github.com/cpp-linter/clang-tools-static-binaries/actions/workflows/build-amd64.yml/badge.svg)](https://github.com/cpp-linter/clang-tools-static-binaries/actions/workflows/build-amd64.yml)
+[![Test](https://github.com/cpp-linter/clang-tools-static-binaries/actions/workflows/test.yml/badge.svg)](https://github.com/cpp-linter/clang-tools-static-binaries/actions/workflows/test.yml) -->
 ![](https://img.shields.io/badge/platform-linux--64%20%7C%20win--64%20%7C%20osx--64%20-blue)
+![Maintenance](https://img.shields.io/maintenance/yes/2024)
 
-Includes clang-format, clang-tidy, clang-query and clang-apply-replacements.
+Includes **[clang-format](https://clang.llvm.org/docs/ClangFormat.html), [clang-tidy](https://clang.llvm.org/extra/clang-tidy/), [clang-query](https://github.com/llvm/llvm-project/tree/main/clang-tools-extra/clang-query) and [clang-apply-replacements](https://github.com/llvm/llvm-project/tree/main/clang-tools-extra/clang-apply-replacements)**.
 
 The supported versions are as follows:
 
-|OS/Version |19|18 |17 |16 |15 |14 |13 |12 |11 |10 |9  |8  |7  |
-|-----------|--|---|---|---|---|---|---|---|---|---|---|---|---|
-|Linux 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
-|Window 64  |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
-|macOS 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+| Clang Tools |OS/Version |19|18 |17 |16 |15 |14 |13 |12 |11 |10 |9  |8  |7  |
+|:------------|-----------|--|---|---|---|---|---|---|---|---|---|---|---|---|
+|clang-format |Linux 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+|             |Window 64  |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+|             |macOS 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+| clang-tidy  |Linux 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+|             |Window 64  |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+|             |macOS 64   |❌|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+| clang-query |Linux 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+|             |Window 64  |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+|             |macOS 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+| clang-apply-replacements |Linux 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+|             |Window 64  |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
+|             |macOS 64   |✔️|✔️ |✔️|✔️|✔️ |✔️|✔️ |✔️ |✔️|✔️| ✔️|✔️|✔️ |
 
 > [!CAUTION]
-> clang-tidy v18+ not working or unavailable.
-> * clang-tidy-18_macosx-amd64 - Reason: tried: '/usr/lib/libz.1.dylib' (no such file)
-> * clang-tidy-19_macosx-amd64 - File size exceeds 2GB, unable to upload to GitHub releases.
+> clang-tidy-19_macosx-amd64 - File size exceeds 2GB, unable to upload to GitHub releases. See #40
 
 ## Download
 
-Grab clang-tools static binaries for your platform from [Releases](https://github.com/cpp-linter/clang-tools-static-binaries/releases) tab!
+* Download clang-tools static binaries for your platform from the [Releases](https://github.com/cpp-linter/clang-tools-static-binaries/releases) tab.
+* Alternatively, use the [clang-tools CLI](https://github.com/cpp-linter/clang-tools-pip) to download and manage them.
 
 ## Motivation behind this repo
 
@@ -40,8 +49,4 @@ This repository ([cpp-linter/clang-tools-static-binaries](https://github.com/cpp
 
 - Verify sha512sums of binaries against output from GitHub Actions to make sure binaries are not modified
 - Fork this repository and run GitHub actions on your behalf
-- Build manually using steps using commands from [.github/workflows](https://github.com/cpp-linter/clang-tools-static-binaries/tree/master/.github/workflows)
-
-## More clang-tools
-
-If there's any interest I could add more tools, or a build for new OS (ex. FreeBSD)
+- Build and test manually using steps and commands from [.github/workflows](https://github.com/cpp-linter/clang-tools-static-binaries/tree/master/.github/workflows)
