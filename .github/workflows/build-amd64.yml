@@ -32,7 +32,6 @@ jobs:
             bindir: '/build/bin'
             dotexe: ''
             shacmd: 'sha512sum'
-  
     runs-on: ${{ matrix.runner }}
     if: ${{ github.actor != 'dependabot[bot]' }}
     env:
