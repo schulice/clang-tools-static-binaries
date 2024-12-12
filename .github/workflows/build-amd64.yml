@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         clang-version: [14.06]
-        os: [ linux, macosx, windows ]
+        os: [ linux ]
         include:
           - clang-version: 14.06
             release: llvm-project-14.0.6.src
